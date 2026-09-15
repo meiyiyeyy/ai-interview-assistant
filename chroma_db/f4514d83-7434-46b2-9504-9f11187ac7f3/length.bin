@@ -1,1 +1,0 @@
-invalid type: string "3. 创建配置属性类\n\njava\n@ConfigurationProperties(prefix = \"company.feature\")\npublic class FeatureProperties {\n    private boolean enabled = true;\n    private String host;\n    // getter/setter...\n}\n4. 创建自动配置类\n\njava\n@AutoConfiguration  // 2.7+ 推荐用此注解替代 @Configuration\n@EnableConfigurationProperties(FeatureProperties.class)\n���
