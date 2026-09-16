@@ -1,8 +1,8 @@
 import streamlit as st
 import requests
 import pandas as pd
-
-API_BASE = "http://localhost:8000"
+import os
+API_BASE = os.getenv("API_BASE", "http://localhost:8000")
 
 st.set_page_config(page_title="AI面试助手", page_icon="🎯", layout="wide")
 st.title("🎯 AI 面试助手")
@@ -266,7 +266,7 @@ with tab_resume:
 
     with col1:
         target_position = st.text_input("目标岗位（可选）", key="review_pos")
-        upload = st.file_uploader("上传简历", type=["pdf", "docx", "txt", "md"],
+        upload = st.file_uploader("上传简历", type=["pdf", "txt", "md"],
                                   key="review_upload")
 
         # 上传后自动解析（不用再点按钮）

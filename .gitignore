@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# 敏感信息
+.env
+*.env
+!.env.example
+
+# 数据库
+*.db
+*.sqlite3
+sessions.db
+
+# 向量库
+chroma_db/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
